@@ -186,6 +186,25 @@ eg.
 npm install --global verdaccio
 ```
 
+- 修改配置文件
+
+```
+* verdaccio配置文件默认位置在c:\users\当前用户\AppData\Roaming\verdaccio下
+
+* 修改config.yarm
+
+#设置NPM包的存放目录
+storage:./storage
+ 
+#设置用户验证的文件。
+auth:
+  htpasswd:
+  file: ./htpasswd
+ 
+#修改监听的端口 不配置这个只能本机访问(记得写在log下，写在其他地方无效)
+listen: 0.0.0.0:4873
+```
+
 - 启动Verdaccio
 
   - 直接启动
